@@ -18,4 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+Route::get('interviews', 'InterviewController@index');
+Route::get('interviews/{interview}', 'InterviewController@show');
+Route::post('interviews', 'InterviewController@store');
+Route::put('interviews/{interview}', 'InterviewController@update');
+Route::delete('interviews/{interview}', 'InterviewController@delete');
