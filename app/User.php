@@ -41,6 +41,10 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class, 'role_users');
     }
 
+    public function interviews(){
+        return $this->belongsTo(Interview::class, 'interviews');
+    }
+
     public function hasRole($role)
     {
         return $this->roles()->where('name', $role)->count() == 1;

@@ -23,6 +23,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Autentikasi
+//Authentication
 Route::get('/user', 'UserController@index');
 Route::get('/admin', 'AdminController@index');
+
+//Create Read Task
+Route::get('/task', 'TaskController@index');
+Route::get('/task/add', 'TaskController@add');
+Route::post('/task/save', 'TaskController@save');
+Route::get('/task/{task}', 'TaskController@show');
+

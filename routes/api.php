@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//API Interviews nanti digeser ke Web.php
 Route::get('interviews', 'InterviewController@index');
 Route::get('interviews/{interview}', 'InterviewController@show');
 Route::post('interviews', 'InterviewController@store');
