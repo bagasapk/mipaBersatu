@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\QuestionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -32,4 +33,6 @@ Route::get('/task', 'TaskController@index');
 Route::get('/task/add', 'TaskController@add');
 Route::post('/task/save', 'TaskController@save');
 Route::get('/task/{task}', 'TaskController@show');
+
+Route::resource('questions', QuestionController::class);
 
